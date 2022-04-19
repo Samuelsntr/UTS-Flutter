@@ -48,10 +48,6 @@ class MyApp extends StatelessWidget {
                 Text("About me", style: TextStyle(fontWeight: FontWeight.bold)),
                 Container(
                     margin: EdgeInsets.all(15),
-                    // decoration: BoxDecoration(
-                    //     border: Border(
-                    //         bottom:
-                    //             BorderSide(color: Colors.black, width: 0.2))),
                     child: Text(
                         "Hi, currently I am studying at the Faculty of Enginerring and Informatics at the Universitas Pendidikan Nasional. My point of interest includes web development, mobile apps development, and UI/UX",
                         maxLines: 4,
