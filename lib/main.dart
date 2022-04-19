@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(45),
-                  bottomRight: Radius.circular(45))),
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50))),
           toolbarHeight: 230, // default is 56
           toolbarOpacity: 0.9,
           title: Column(
@@ -42,16 +42,16 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Container(
             width: 400,
-            margin: EdgeInsets.all(15),
+            margin: EdgeInsets.only(top: 35),
             child: Column(
               children: [
                 Text("About me", style: TextStyle(fontWeight: FontWeight.bold)),
                 Container(
-                    margin: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom:
-                                BorderSide(color: Colors.black, width: 0.2))),
+                    margin: EdgeInsets.all(15),
+                    // decoration: BoxDecoration(
+                    //     border: Border(
+                    //         bottom:
+                    //             BorderSide(color: Colors.black, width: 0.2))),
                     child: Text(
                         "Hi, currently I am studying at the Faculty of Enginerring and Informatics at the Universitas Pendidikan Nasional. My point of interest includes web development, mobile apps development, and UI/UX",
                         maxLines: 4,
@@ -59,129 +59,159 @@ class MyApp extends StatelessWidget {
                         style:
                             TextStyle(color: Colors.black.withOpacity(0.5)))),
                 Container(
-                  margin: EdgeInsets.all(10),
-                  child: Text("Skills",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  width: 155,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(color: Colors.black, width: 0.1))),
                 ),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom:
-                                BorderSide(color: Colors.black, width: 0.2))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "5",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.orange,
-                                  size: 18.0,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text("HTML",
+                  margin: EdgeInsets.all(10),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Skills",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                Container(
+                    child: SizedBox(
+                  width: 300,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "5",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                                size: 18.0,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text("HTML",
                                     style: TextStyle(
-                                        color: Colors.black.withOpacity(0.5)))
-                              ],
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "4",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.orange,
-                                  size: 18.0,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text("CSS",
+                                        color: Colors.black.withOpacity(0.5))),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "4",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                                size: 18.0,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text("CSS",
                                     style: TextStyle(
-                                        color: Colors.black.withOpacity(0.5)))
-                              ],
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "3",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.orange,
-                                  size: 18.0,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text("JavaScript",
+                                        color: Colors.black.withOpacity(0.5))),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "3",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                                size: 18.0,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text("JavaScript",
                                     style: TextStyle(
-                                        color: Colors.black.withOpacity(0.5)))
-                              ],
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "3",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  color: Colors.orange,
-                                  size: 18.0,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text("Flutter",
+                                        color: Colors.black.withOpacity(0.5))),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "3",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                                size: 18.0,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text("Flutter",
                                     style: TextStyle(
-                                        color: Colors.black.withOpacity(0.5)))
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    )),
+                                        color: Colors.black.withOpacity(0.5))),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )),
+                Container(
+                  margin: EdgeInsets.only(top: 10),
+                  width: 155,
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(color: Colors.black, width: 0.1))),
+                ),
                 Container(
                   margin: EdgeInsets.all(20),
                   child: Column(children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          "Find me on",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Find me on",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
@@ -195,7 +225,7 @@ class MyApp extends StatelessWidget {
                               child: Icon(
                                 Icons.facebook,
                                 color: Colors.blueAccent,
-                                size: 18.0,
+                                size: 20.0,
                               ),
                             ),
                             Padding(
@@ -203,7 +233,7 @@ class MyApp extends StatelessWidget {
                               child: Icon(
                                 Icons.whatsapp,
                                 color: Colors.blueAccent,
-                                size: 18.0,
+                                size: 20.0,
                               ),
                             ),
                             Padding(
@@ -211,7 +241,7 @@ class MyApp extends StatelessWidget {
                               child: Icon(
                                 Icons.telegram,
                                 color: Colors.blueAccent,
-                                size: 18.0,
+                                size: 20.0,
                               ),
                             ),
                           ],
